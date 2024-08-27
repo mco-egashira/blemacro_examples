@@ -9,7 +9,6 @@
    <write description="Write 0x01 to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" value="01" type="WRITE_REQUEST"/>
    
    <!-- 500ms間通知を待ち、その間に0x11を受信したら電源ON完了のアイコンを表示、0x12を受信したら電源ON失敗のアイコンを表示する -->
-   <!--
    <wait-for-notification description="Wait for notification" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" timeout="500">
       <on-condition value="11">
          <icon name="LED_ON"/>
@@ -21,5 +20,4 @@
          <icon name="LED_ON_FAILED"/>
       </on-timeout>
    </wait-for-notification>
-   -->
 </macro>

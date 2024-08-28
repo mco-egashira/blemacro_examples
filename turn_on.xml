@@ -23,5 +23,5 @@
       <!-- <on-timeout>
          <icon name="LED_ON_FAILED"/>
       </on-timeout> -->
-   </wait-for-notification> -->
+   <!-- </wait-for-notification> -->
 </macro>

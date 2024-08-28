@@ -14,10 +14,10 @@
       <check-notification value="11">
          <icon name="LED_ON"/>
       </check-notification>
-      <check-notification value="12">
+      <!-- <check-notification value="12">
          <icon name="LED_ON_FAILED"/>
       </check-notification>
-      <!-- <on-timeout>
+      <on-timeout>
          <icon name="LED_ON_FAILED"/>
       </on-timeout> -->
    </wait-for-notification>

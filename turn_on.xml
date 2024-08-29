@@ -3,6 +3,7 @@
       <assert-characteristic description="Ensure 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64 characteristic" uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64">
          <assert-cccd description="Ensure CCCD"/>
          <property name="WRITE" requirement="MANDATORY"/>
+         <property name="NOTIFY" requirement="MANDATORY"/>
       </assert-characteristic>
    </assert-service>
    <write-descriptor description="Enable notifications for 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" uuid="00002902-0000-1000-8000-00805f9b34fb" value="0100"/>

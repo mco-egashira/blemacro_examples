@@ -1,4 +1,4 @@
-<macro name="turn_on" icon="PIKACHU">
+<macro name="turn_on" icon="LED_ON">
    <assert-service description="Ensure 0f044177-a99b-4f0c-9d04-c5f1d00f43d3 service" uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
       <assert-characteristic description="Ensure 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64 characteristic" uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64">
          <assert-cccd description="Ensure CCCD"/>

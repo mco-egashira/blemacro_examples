@@ -6,7 +6,7 @@
          <property name="NOTIFY" requirement="MANDATORY"/>
       </assert-characteristic>
    </assert-service>
-   <write-descriptor description="Enable notifications for 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" uuid="00002902-0000-1000-8000-00805f9b34fb" value="0100"/>
+   <write-descriptor description="Enable notifications for 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" uuid="00002902-a99b-4f0c-9d04-c5f1d00f43d3" value="0100"/>
    <write description="Write 0x01 to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" value="01" type="WRITE_REQUEST"/>
    
    <!-- 500ms間通知を待ち、その間に0x11を受信したら電源ON完了のアイコンを表示、0x12を受信したら電源ON失敗のアイコンを表示する -->

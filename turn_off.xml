@@ -6,19 +6,13 @@
          <property name="NOTIFY" requirement="MANDATORY"/>
       </assert-characteristic>
    </assert-service>
+
    <write-descriptor description="Enable notifications for 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" uuid="00002902-0000-1000-8000-00805f9b34fb" value="0100"/>
    <write description="Write 0x02 to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" value="02" type="WRITE_REQUEST"/>
-   
-   <!-- 500ms間通知を待ち、その間に0x21を受信したら電源OFF完了のアイコンを表示、0x22を受信したら電源OFF失敗のアイコンを表示する -->
-   <wait-for-notification description="Wait for notification" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" timeout="500">
-      <on-condition value="21">
-         <icon name="LED_OFF"/>
-      </on-condition>
-      <on-condition value="22">
-         <icon name="LED_OFF_FAILED"/>
-      </on-condition>
-      <on-timeout>
-         <icon name="LED_OFF_FAILED"/>
-      </on-timeout>
-   </wait-for-notification>
+
+   <sleep description="Wait for 3 seconds" timeout="3000"/>
+
+   <read description="Read value from 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
+      <assert-value description="Assert value equals 0x21" value="21"/>
+   </read>
 </macro>

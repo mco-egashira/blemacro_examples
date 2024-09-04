@@ -16,6 +16,4 @@
    </read>
 </macro>
 
-<macro name="show_power_on_failure" icon="LED_OFF">
-   <toast message="Power ON failed or unexpected value"/>
-</macro>
+<macro name="show_power_on_failure" icon="LED_OFF"/>

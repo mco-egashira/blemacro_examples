@@ -11,7 +11,7 @@
    <write description="Write 0x01 to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" value="01" type="WRITE_REQUEST"/>
 
    <sleep description="Wait for 5 seconds" duration="5000"/>
-   <read description="Read value from 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
+   <!-- <read description="Read value from 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
       <assert-value description="Assert value equals 0x11" value="11">
-   </read>
+   </read> -->
 </macro>

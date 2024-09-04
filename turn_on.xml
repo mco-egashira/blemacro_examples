@@ -12,7 +12,7 @@
 
      <sleep description="Wait for 5 seconds" duration="5000"/>
    <read description="Read value from 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
-      <assert-value description="Assert value equals 0x11" value="11" next-macro="show_power_on_success"/>
+      <assert-value description="Assert value equals 0x11" value="11">
       <on-assertion-failure next-macro="show_power_on_failure"/>
    </read>
    
@@ -22,12 +22,4 @@
    <wait-for-wrire description="Wait for notification to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64">
       <assert-value description="Assert value equals 0x11" value="17"/>
    </wait-for-write> -->
-</macro>
-
-<macro name="show_power_on_success" icon="POWER_ON_SUCCESS">
-   <toast message="Power ON successful"/>
-</macro>
-
-<macro name="show_power_on_failure" icon="POWER_ON_FAILURE">
-   <toast message="Power ON failed or unexpected value"/>
 </macro>

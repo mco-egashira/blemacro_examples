@@ -13,7 +13,7 @@
    <!-- <sleep-if service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" value="17" timeout="5000"/> -->
 
    <!-- 500ms間通知を待ち、その間に0x11を受信したら電源ON完了のアイコンを表示、0x12を受信したら電源ON失敗のアイコンを表示する -->
-   <wait-for-wrire description="Wait for notification to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" uuid="00002902-0000-1000-8000-00805f9b34fb" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64">
+   <wait-for-wrire description="Wait for notification to 6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" characteristic-uuid="6dd812e5-b6fb-4fd0-8abb-d0ccdc6ace64">
       <assert-value description="Assert value equals 0x11" value="17"/>
    </wait-for-write>
 </macro>

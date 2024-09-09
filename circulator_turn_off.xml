@@ -1,0 +1,19 @@
+<macro name="circulator_turn_off" icon="LED_OFF">
+   <assert-service description="Ensure 0f044177-a99b-4f0c-9d04-c5f1d00f43d3 service" uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
+      <assert-characteristic description="Ensure 87b16543-716e-4ae9-b3a4-c7a5a58b4c73 characteristic" uuid="87b16543-716e-4ae9-b3a4-c7a5a58b4c73">
+         <assert-cccd description="Ensure CCCD"/>
+         <property name="READ" requirement="MANDATORY"/>
+         <property name="WRITE" requirement="MANDATORY"/>
+         <property name="NOTIFY" requirement="MANDATORY"/>
+      </assert-characteristic>
+   </assert-service>
+
+   <write-descriptor description="Enable notifications for 87b16543-716e-4ae9-b3a4-c7a5a58b4c73" characteristic-uuid="87b16543-716e-4ae9-b3a4-c7a5a58b4c73" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" uuid="00002902-0000-1000-8000-00805f9b34fb" value="0100"/>
+   <write description="Write 0x02 to 87b16543-716e-4ae9-b3a4-c7a5a58b4c73" characteristic-uuid="87b16543-716e-4ae9-b3a4-c7a5a58b4c73" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3" value="02" type="WRITE_REQUEST"/>
+
+   <sleep description="Wait for 3 seconds" timeout="3000"/>
+
+   <read description="Read value from 87b16543-716e-4ae9-b3a4-c7a5a58b4c73" characteristic-uuid="87b16543-716e-4ae9-b3a4-c7a5a58b4c73" service-uuid="0f044177-a99b-4f0c-9d04-c5f1d00f43d3">
+      <assert-value description="Assert value equals 0x21" value="21"/>
+   </read>
+</macro>
